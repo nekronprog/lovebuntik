@@ -1,0 +1,262 @@
+/* ========================= FONT ========================= */ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); /* ========================= RESET ========================= */ * { margin: 0; padding: 0; box-sizing: border-box; } /* ========================= GLOBAL ========================= */ html { scroll-behavior: smooth; } body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif; -webkit-font-smoothing: antialiased; position: relative; } /* ========================= GLOW BACKGROUND (FONARI) ========================= */ body::before { content: ""; position: fixed; top: 0; left: -250px; width: 600px; height: 100vh; background: radial-gradient( circle at center, rgba(79, 163, 255, 0.45), rgba(79, 163, 255, 0.18), transparent 70% ); filter: blur(60px); pointer-events: none; z-index: 0; } body::after { content: ""; position: fixed; top: 0; right: -250px; width: 600px; height: 100vh; background: radial-gradient( circle at center, rgba(255, 61, 90, 0.35), rgba(255, 61, 90, 0.15), transparent 70% ); filter: blur(70px); pointer-events: none; z-index: 0; } /* ========================= MAIN WRAPPER ========================= */ .main-page { background: #fff; overflow-x: hidden; position: relative; z-index: 1; } /* ========================= HEADER ========================= */ .header { position: fixed; top: 0; left: 0; width: 100%; height: 75px; display: flex; align-items: center; padding: 0 25px; background: rgba(255,255,255,0.75); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); z-index: 1000; } /* ========================= LEFT LOGO ========================= */ .logo { display: flex; align-items: center; flex-shrink: 0; min-width: 70px; } .logo img { height: 37px; object-fit: cover; border-radius: 10px; display: block; } /* ========================= CENTER NAV ========================= */ .nav-center { position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 35px; align-items: center; } .nav-center a { text-decoration: none; color: #161616; font-weight: 500; font-size: 18px; position: relative; transition: 0.3s ease; } .nav-center a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0%; height: 2px; background: #ff3d5a; transition: 0.3s ease; } .nav-center a:hover { color: #ff3d5a; } .nav-center a:hover::after { width: 100%; } /* ========================= RIGHT BRAND TEXT ========================= */ .brand-text { margin-left: auto; font-size: 18px; font-weight: 600; color: #161616; display: flex; align-items: center; } /* ========================= HERO ========================= */ .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; z-index: 2; } .hero h1 { font-size: 50px; color: #161616; } .hero p { font-size: 20px; color: #555; margin-top: 10px; width: 550px;} /* ========================= SECTIONS ========================= */ .section { padding: 100px 20px; text-align: center; position: relative; z-index: 2; } .section h2 { font-size: 35px; margin-bottom: 30px; color: #161616; } /* ========================= BLOCK ========================= */ .block { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; } .text { max-width: 480px; color: #333; line-height: 1.6; } .text p{ font-size: 18px; } /* ========================= IMAGE PLACEHOLDER ========================= */ .img-placeholder { width: 320px; height: 350px; background: linear-gradient(135deg, #4fa3ff, #ff3d5a); border-radius: 15px; display: flex; justify-content: center; align-items: center; color: white; font-weight: 600; transition: 0.3s ease; } .img-placeholder:hover { transform: scale(1.05); } /* ========================= GALLERY ========================= */ .gallery { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; } /* ========================= CARDS ========================= */ .cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; } .card { width: 260px; padding: 20px; border-radius: 15px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s ease; } .card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); } /* ========================= WE SECTION ========================= */ .we-wrapper { display: flex; flex-direction: column; gap: 60px; align-items: center; } .we-item { display: flex; align-items: center; gap: 40px; max-width: 900px; width: 100%; } .we-item.reverse { flex-direction: row-reverse; } .we-img { width: 280px; height: 290px; border-radius: 18px; background: linear-gradient(135deg, #4fa3ff, #ff3d5a); display: flex; justify-content: center; align-items: center; color: white; font-weight: 600; transition: 0.3s ease; } .we-img:hover { transform: scale(1.05) rotate(-1deg); } .we-text { text-align: left; max-width: 420px; } .we-text h3 { font-size: 24px; margin-bottom: 10px; } .we-text p { color: #555; line-height: 1.6; font-size: 18px;} /* ========================= FUTURE SECTION ========================= */ .future { background: transparent; } .future-box { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; } .future-text { max-width: 420px; text-align: left; } .future-text h3 { font-size: 24px; margin-bottom: 15px; color: #161616; } .future-text p { color: #555; line-height: 1.6; } .future-card { width: 280px; padding: 25px; border-radius: 18px; background: linear-gradient(135deg, #4fa3ff, #ff3d5a); color: white; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.15); transition: 0.3s ease; } .future-card:hover { transform: translateY(-8px) rotate(-1deg); } .future-icon { font-size: 40px; margin-bottom: 10px; } /* ========================= FOOTER UPGRADE ========================= */ .footer { width: 100%; padding: 60px 20px; background: #161616; color: white; text-align: center; margin-top: 80px; position: relative; z-index: 2; } /* content */ .footer-content { max-width: 600px; margin: 0 auto; } /* title */ .footer-content h3 { font-size: 28px; margin-bottom: 10px; letter-spacing: 1px; } /* text */ .footer-content p { color: #bbb; line-height: 1.6; margin-top: 10px; } /* line */ .footer-line { width: 80px; height: 2px; background: linear-gradient(90deg, #4fa3ff, #ff3d5a); margin: 20px auto; border-radius: 10px; } /* small text */ .footer-small { font-size: 13px; color: #777; margin-top: 10px; } 
+
+
+/* ===== LAPTOP ===== */
+@media (max-width: 1200px) {
+    .nav-center {
+        gap: 28px;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 34px;
+    }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+
+    .header {
+        padding: 0 15px;
+    }
+
+    .nav-center {
+        gap: 22px;
+    }
+
+    .nav-center a {
+        font-size: 17px;
+    }
+
+    .brand-text {
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    /* 🔥 WE SECTION FIX */
+    .we-item {
+        gap: 25px;
+    }
+
+    .we-text {
+        max-width: 320px;
+    }
+
+    .we-text h3 {
+        font-size: 20px;
+    }
+
+    .we-text p {
+        font-size: 15px;
+    }
+
+    .we-img {
+        transform: scale(0.95);
+    }
+}
+
+/* ===== SMALL TABLET / BIG PHONE ===== */
+@media (max-width: 768px) {
+
+    .header {
+        height: 65px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .nav-center {
+        gap: 14px;
+    }
+
+    .nav-center a {
+        font-size: 16px;
+    }
+
+    .brand-text {
+        font-size: 15px;
+    }
+
+    /* 🔥 WE SECTION FIX */
+    .we-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .we-text {
+        max-width: 100%;
+    }
+
+    .we-text h3 {
+        font-size: 18px;
+    }
+
+    .we-text p {
+        font-size: 14px;
+    }
+
+    .we-img {
+        width: 220px;
+        height: 220px;
+        transform: scale(0.9);
+    }
+}
+
+/* ===== PHONE ===== */
+@media (max-width: 480px) {
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+        gap: 6px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .brand-text {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        order: 0;
+    }
+
+    .nav-center {
+        position: static;
+        transform: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        order: 1;
+    }
+
+    .nav-center a {
+      padding-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .hero h1{
+      font-size: 45px;
+    }
+
+    .text p{
+      font-size: 16px;
+      margin-bottom: -30px;
+    }
+
+    .img-placeholder{
+      width: 320px;
+      height: 320px;
+      transform: scale(0.85);
+    }
+
+    /* 🔥 WE SECTION FIX MOBILE */
+    .we-text h3 {
+        font-size: 20px;
+    }
+
+    .we-text p {
+        font-size: 17px;
+    }
+
+    .we-img {
+        width: 300px;
+        height: 300px;
+        transform: scale(0.85);
+    }
+}
+
+/* ========================= IMAGE FIX ========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-placeholder img,
+.we-img img,
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.img-placeholder,
+.we-img,
+.card {
+    overflow: hidden;
+}
+
+
+/* =========================
+   HERO RESPONSIVE
+========================= */
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        width: 90%;
+    }
+}
+
+/* ===== SMALL TABLET ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+        width: 85%;
+    }
+}
+
+/* ===== PHONE ===== */
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
